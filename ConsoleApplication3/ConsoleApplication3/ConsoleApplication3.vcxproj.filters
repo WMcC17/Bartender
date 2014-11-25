@@ -29,5 +29,8 @@
     <ClInclude Include="AdultBev.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SagaSpecialties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

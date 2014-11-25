@@ -15,6 +15,7 @@ public:
 	string getName();
 	Ingredients getIngredients();
 	void setIngredients(vector<Ingredients> vect);
+	virtual void mix() = 0;
 
 
 };

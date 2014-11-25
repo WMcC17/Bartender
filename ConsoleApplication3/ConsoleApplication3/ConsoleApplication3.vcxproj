@@ -82,6 +82,7 @@
     <ClInclude Include="AdultBev.h" />
     <ClInclude Include="Drinks.h" />
     <ClInclude Include="Ingredients.h" />
+    <ClInclude Include="SagaSpecialties.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
