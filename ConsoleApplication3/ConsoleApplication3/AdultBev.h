@@ -8,7 +8,7 @@ using namespace std;
 class AdultBev : public Drinks{
 private:
 public:
-	void CheckAge();
+	bool Underage();
 	AdultBev VirginAlt();
 	void mix();
 
