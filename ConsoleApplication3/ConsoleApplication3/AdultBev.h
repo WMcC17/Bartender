@@ -8,6 +8,11 @@ using namespace std;
 class AdultBev : public Drinks{
 private:
 public:
+<<<<<<< HEAD
+	bool Underage();
+	AdultBev VirginAlt(); // Remove Alcoholic ingredients and return new bev.
+	void mix(); // Cout ingredients and amount needed
+=======
 
 	
 	AdultBev VirginAlt(); // Remove Alcoholic ingredients and return new bev.
@@ -17,6 +22,7 @@ public:
 	AdultBev VirginAlt();
 	
 
+>>>>>>> origin/master
 
 
 };
