@@ -1,54 +1,33 @@
+<<<<<<< HEAD
 #include"Drinks.h"
+=======
+
+#include"Drinks.h"
+#include"MiscFunk.cpp"
+
+>>>>>>> origin/master
 #include<iostream>
 #include<string>
 #include<fstream>
 #include<vector>
 using namespace std;
 
-bool How()
-{
-	int choice;
-	cout << "Do you want to Pick-A-Drink (1) OR Recieve a Recipe Based On Your Ingedients (2)?" << endl;
-		cin >> choice;
-		if (choice == 1)
-			return true;
-		if (choice == 2)
-			{
-			cout << "What ingredietns do you have?" << endl;
-			return true;
-		}
-		else return false;
-}
 
+<<<<<<< HEAD
 int main(){
 
 	ifstream ingfile;
 	ingfile.open("Drink(Ingredients).txt");
+=======
+>>>>>>> origin/master
 
-	if (ingfile.fail()) {
-		cout << "Files not found.\n";
-		return 0;
-	}
+int main(){
+	Readinfiles();
 
-	ifstream drkfile;
-	drkfile.open("drinks.txt");
 
-	if (drkfile.fail()){
-		cout << "Files not found.\n";
-		return 0;
-	}
 
-	string line;
-	vector<Ingredients> Database;
-	Ingredients ingr;
-									// Reading in data from Ingredient file
-	while (!ingfile.eof()){
-		getline(ingfile, line);
-		ingr.setName(line);
-		Database.push_back(ingr);
-	}
-	vector<Drinks> drk;
 	
+<<<<<<< HEAD
 	string name;
 	string ing;
 	double amt;
@@ -76,4 +55,6 @@ int main(){
 	while (!How()){
 		How();
 	};
+=======
+>>>>>>> origin/master
 }
