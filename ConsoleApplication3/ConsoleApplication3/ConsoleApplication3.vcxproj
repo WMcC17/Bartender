@@ -78,6 +78,7 @@
   <ItemGroup>
     <ClCompile Include="AdultBev.cpp" />
     <ClCompile Include="Drinks.cpp" />
+    <ClCompile Include="MiscFunk.cpp" />
     <ClCompile Include="Ingredients.cpp" />
     <ClCompile Include="SagaSpecialties.cpp" />
     <ClCompile Include="Source.cpp" />
