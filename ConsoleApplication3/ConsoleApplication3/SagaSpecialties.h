@@ -9,7 +9,7 @@ class SagaSpecs : public Drinks{
 private:
 public:
 
-	void mix();
+	void mix(); // cout ingredients and amount needed
 
 
 
