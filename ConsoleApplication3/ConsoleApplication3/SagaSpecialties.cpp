@@ -3,3 +3,5 @@
 #include<string>
 using namespace std;
 
+//Couts mixed drink.
+void SagaSpecs::mix(){}

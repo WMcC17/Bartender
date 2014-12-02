@@ -1,5 +1,5 @@
 
-#include"Drinks.h"
+#include"Drinks.cpp"
 #include"MiscFunk.cpp"
 
 #include<iostream>
@@ -12,6 +12,9 @@ using namespace std;
 
 int main(){
 	Readinfiles();
+	How();
+	if (!How())
+		return 0;
 
 
 

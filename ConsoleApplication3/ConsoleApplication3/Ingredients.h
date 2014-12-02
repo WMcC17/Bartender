@@ -12,7 +12,7 @@ public:
 	
 	void setName(string name);
 	string getName();
-	void setAmtNeed(double _amtNeeded);
+	void setAmtNeed(double amtn);
 	double getAmtNeed();
 	
 

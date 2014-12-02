@@ -13,7 +13,7 @@ private:
 public:
 	void setName(string name);
 	string getName();
-	Ingredients getIngredients();
+	vector<Ingredients> getIngredients();
 	void setIngredients(vector<Ingredients> vect);
 	
 

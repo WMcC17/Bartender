@@ -11,3 +11,10 @@ bool AdultBev::Underage(){
 	else return false;
 
 }
+
+
+
+void AdultBev::mix(){}
+
+AdultBev VirginAlt(){}
+

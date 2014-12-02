@@ -85,4 +85,8 @@ bool How()
 	}
 } 
 
+
+void PickaDrink();
+
+void FindaDrink();
 #endif
