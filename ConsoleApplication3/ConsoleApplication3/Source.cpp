@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 #include"Drinks.h"
-=======
->>>>>>> origin/master
 #include<iostream>
 #include<string>
 #include<fstream>
@@ -24,7 +21,7 @@ bool How()
 }
 
 int main(){
-<<<<<<< HEAD
+
 	ifstream ingfile;
 	ingfile.open("Drink(Ingredients).txt");
 
@@ -75,8 +72,6 @@ int main(){
 		drk[a].setIngredients(ings);
 		ings.clear();
 	}
-=======
->>>>>>> origin/master
 
 	while (!How()){
 		How();

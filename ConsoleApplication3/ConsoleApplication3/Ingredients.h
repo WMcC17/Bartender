@@ -15,9 +15,5 @@ public:
 	void setAmtNeed(double _amtNeeded);
 	double getAmtNeed();
 	
-
-
 };
-
-
 #endif
