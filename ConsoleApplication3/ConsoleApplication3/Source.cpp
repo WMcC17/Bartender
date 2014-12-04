@@ -1,11 +1,11 @@
-<<<<<<< HEAD
-#include"Drinks.h"
-=======
+
+
+
 
 #include"Drinks.cpp"
 #include"MiscFunk.cpp"
 
->>>>>>> origin/master
+
 #include<iostream>
 #include<string>
 #include<fstream>
@@ -13,37 +13,49 @@
 using namespace std;
 
 
-<<<<<<< HEAD
-int main(){
 
+
+int main(){
 	ifstream ingfile;
 	ingfile.open("Drink(Ingredients).txt");
-=======
->>>>>>> origin/master
 
-int main(){
-	Readinfiles();
-	How();
-	if (!How())
+	if (ingfile.fail()) {
+		cout << "Files not found.\n";
 		return 0;
+	}
 
+	ifstream drkfile;
+	drkfile.open("drinks.txt");
 
+	if (drkfile.fail()){
+		cout << "Files not found.\n";
+		return 0;
+	}
 
-	
-<<<<<<< HEAD
+	string line;
+	vector<Ingredients> IngsData;
+	Ingredients ingr;
+	// Reading in data from Ingredient file
+	while (!ingfile.eof()){
+		getline(ingfile, line);
+		ingr.setName(line);
+		IngsData.push_back(ingr);
+	}
+	vector<Drinks> drkData;
+	Drinks drk;
 	string name;
 	string ing;
 	double amt;
 	int numing;
 	int a = 0;
-									// Reading in data from Drinks file
+	// Reading in data from Drinks file
 	while (!drkfile.eof()){
 		getline(drkfile, name);
 		drkfile >> numing;
-		drk[a].setName(name);
+		drkData[a].setName(name);
 		vector<Ingredients> ings;
 		for (int i = 0; i < numing; i++){
-			
+
 			drkfile >> amt;
 			drkfile.ignore();
 			getline(drkfile, ing);
@@ -51,13 +63,30 @@ int main(){
 			ingr.setName(ing);
 			ings.push_back(ingr);
 		}
-		drk[a].setIngredients(ings);
+		
+		drk.setIngredients(ings);
+		drkData.push_back(drk);
 		ings.clear();
+		a++;
+	}
+	
+
+	if (PickVFind())
+		PickaDrink();
+	else{
+		vector<Ingredients> ings;
+		string nms;
+		cout << "What ingredients do you have? When done, please enter 'done'\n";
+		cin >> nms;
+		int i = 0;
+		Ingredients ingr;
+		while (nms != "done"){
+			ingr.setName(nms);
+			ings.push_back(ingr);
+			i++;
+			cin >> nms;
+		}
+		FindaDrink();
 	}
 
-	while (!How()){
-		How();
-	};
-=======
->>>>>>> origin/master
 }

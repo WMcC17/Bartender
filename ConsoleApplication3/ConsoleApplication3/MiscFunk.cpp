@@ -65,28 +65,39 @@ void Readinfiles(){
 
 
 // Ask user for desired software mechanic
-bool How()
+bool PickVFind()
 {
 	int choice;
 	cout << "Do you want to Pick-A-Drink (1) OR Find-A-Drink (2)?" << endl;
 	cin >> choice;
-	if (choice == 1){
-		cout << "What can we interest you in today?\n";
-		return true;
+	while (choice != 1 && choice != 2){
+		PickVFind();
+		break;
 	}
-	if (choice == 2)
-	{
-		cout << "What ingredietns do you have?" << endl;
+	switch (choice){
+	case 1:
+		
 		return true;
-	}
-	else{
-		cout << "Have a good day.\n";
+	case 2:
+		
 		return false;
+	default:
+		break;
 	}
+	
+	
 } 
 
+// Present a list of Drink types and allow user to iterate through the list until they have something they want.
+void PickaDrink(){
 
-void PickaDrink();
 
-void FindaDrink();
+};
+
+// Ask for User's desired ingredients and return matching Drinks.
+void FindaDrink(Ingredients ing){
+	
+
+	
+};
 #endif
