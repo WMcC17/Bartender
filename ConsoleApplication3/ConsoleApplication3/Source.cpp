@@ -73,20 +73,6 @@ int main(){
 
 	if (PickVFind())
 		PickaDrink();
-	else{
-		vector<Ingredients> ings;
-		string nms;
-		cout << "What ingredients do you have? When done, please enter 'done'\n";
-		cin >> nms;
-		int i = 0;
-		Ingredients ingr;
-		while (nms != "done"){
-			ingr.setName(nms);
-			ings.push_back(ingr);
-			i++;
-			cin >> nms;
-		}
-		FindaDrink();
-	}
+	else{ FindaDrink(drkData); }
 
 }

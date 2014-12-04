@@ -1,3 +1,7 @@
+#ifndef _ADULTBEV_CPP_
+#define _ADULTBEV_CPP_
+
+
 #include "AdultBev.h"
 #include<iostream>
 #include<string>
@@ -18,3 +22,4 @@ void AdultBev::mix(){}
 
 AdultBev VirginAlt(){}
 
+#endif

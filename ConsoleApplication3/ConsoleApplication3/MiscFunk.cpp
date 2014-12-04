@@ -95,9 +95,38 @@ void PickaDrink(){
 };
 
 // Ask for User's desired ingredients and return matching Drinks.
-void FindaDrink(Ingredients ing){
+void FindaDrink(vector<Drinks> drkData){
 	
+	vector<Ingredients> ings;
+	string nms;
+	cout << "What ingredients do you have? When done, please enter 'done'\n";
+	cin >> nms;
+	int i = 0;
+	Ingredients ingr;
+	while (nms != "done"){
+		ingr.setName(nms);
+		ings.push_back(ingr);
+		i++;
+		cin >> nms;
+	}
 
+		for (int i = 0; i < ings.size(); i++){
+			for (int a = 0; a < drkData.size(); a++){
+				for (int b = 0; b < drkData[a].getIngredients().size(); b++){
+					if (ings[i].getName() == drkData[a].getIngredients().at(b).getName())
+						swap(drkData[a].getIngredients().at(i), drkData[a].getIngredients().at(b));
+				}
+			}
+		}
+		bool matches = true;
+		for (int a = 0; a < drkData.size(); a++){
+			for (int i = 0; i < ings.size(); i++){
+				if (ings[i].getName() != drkData[a].getIngredients().at(i).getName)
+					matches = false;
+			}
+			if (matches)
+				cout << drkData.at(a).getName << endl;
+		}
 	
 };
 #endif
