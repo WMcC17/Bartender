@@ -24,7 +24,7 @@ int main(){
 		cout << "Files not found.\n";
 		return 0;
 	}
-
+	AdultBev Ab;
 	string line;
 	vector<Ingredients> IngsData;
 	Ingredients ingr;
@@ -41,12 +41,15 @@ int main(){
 	double amt;
 	int numing;
 	int a = 0;
+	int _check;
+	vector<Ingredients> ings;
 	// Reading in data from Drinks file
 	while (!drkfile.eof()){
 		getline(drkfile, name);
+		drkfile >> _check;
 		drkfile >> numing;
 		drkData[a].setName(name);
-		vector<Ingredients> ings;
+		
 		for (int i = 0; i < numing; i++){
 
 			drkfile >> amt;
@@ -56,16 +59,26 @@ int main(){
 			ingr.setName(ing);
 			ings.push_back(ingr);
 		}
-		
-		drk.setIngredients(ings);
+		drk.setCheck(_check);
+		if (drk.getCheck() == 0)
+			drk.setIngredients(ings);
+		else {
+			drk = Ab;
+		}
 		drkData.push_back(drk);
+
 		ings.clear();
 		a++;
 	}
 	
 
+<<<<<<< HEAD
 	if (PickVFind())
 		PickaDrink(drkData);
+=======
+	if (PickVFind());
+		//PickaDrink();
+>>>>>>> origin/master
 	else{ FindaDrink(drkData); }
-
+	
 }

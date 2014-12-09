@@ -21,24 +21,12 @@
     <ClInclude Include="Ingredients.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AdultBev.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SagaSpecialties.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Drinks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AdultBev.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Ingredients.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SagaSpecialties.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
