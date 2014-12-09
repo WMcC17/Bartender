@@ -1,27 +1,36 @@
-﻿Build started 12/2/2014 1:35:28 PM.
+﻿Build started 12/8/2014 6:34:38 PM.
      1>Project "C:\Users\wmcclennan17\Documents\GitHub\Bartender\ConsoleApplication3\ConsoleApplication3\ConsoleApplication3.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AdultBev.cpp Drinks.cpp Ingredients.cpp SagaSpecialties.cpp Source.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AdultBev.cpp MiscFunk.cpp
+         MiscFunk.cpp
+     1>c:\users\wmcclennan17\documents\github\bartender\consoleapplication3\consoleapplication3\miscfunk.cpp(95): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\wmcclennan17\documents\github\bartender\consoleapplication3\consoleapplication3\miscfunk.cpp(123): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\wmcclennan17\documents\github\bartender\consoleapplication3\consoleapplication3\miscfunk.cpp(124): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\wmcclennan17\documents\github\bartender\consoleapplication3\consoleapplication3\miscfunk.cpp(125): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\wmcclennan17\documents\github\bartender\consoleapplication3\consoleapplication3\miscfunk.cpp(132): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\wmcclennan17\documents\github\bartender\consoleapplication3\consoleapplication3\miscfunk.cpp(133): warning C4018: '<' : signed/unsigned mismatch
          AdultBev.cpp
          Generating Code...
-         Skipping... (no relevant changes detected)
-         Source.cpp
-         SagaSpecialties.cpp
-         Ingredients.cpp
-         Drinks.cpp
+     1>c:\users\wmcclennan17\documents\github\bartender\consoleapplication3\consoleapplication3\miscfunk.cpp(88): warning C4715: 'PickVFind' : not all control paths return a value
+     1>c:\users\wmcclennan17\documents\github\bartender\consoleapplication3\consoleapplication3\miscfunk.cpp(96): warning C4700: uninitialized local variable 'choice' used
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\wmcclennan17\Documents\GitHub\Bartender\ConsoleApplication3\Debug\ConsoleApplication3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\wmcclennan17\Documents\GitHub\Bartender\ConsoleApplication3\Debug\ConsoleApplication3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\wmcclennan17\Documents\GitHub\Bartender\ConsoleApplication3\Debug\ConsoleApplication3.lib" /MACHINE:X86 Debug\AdultBev.obj
          Debug\Drinks.obj
+         Debug\MiscFunk.obj
          Debug\Ingredients.obj
          Debug\SagaSpecialties.obj
          Debug\Source.obj
-     1>Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall Ingredients::setName(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?setName@Ingredients@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function _main
-     1>Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall Ingredients::setAmtNeed(double)" (?setAmtNeed@Ingredients@@QAEXN@Z) referenced in function _main
-     1>Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall Drinks::setName(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?setName@Drinks@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function _main
-     1>Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall Drinks::setIngredients(class std::vector<class Ingredients,class std::allocator<class Ingredients> >)" (?setIngredients@Drinks@@QAEXV?$vector@VIngredients@@V?$allocator@VIngredients@@@std@@@std@@@Z) referenced in function _main
-     1>C:\Users\wmcclennan17\Documents\GitHub\Bartender\ConsoleApplication3\Debug\ConsoleApplication3.exe : fatal error LNK1120: 4 unresolved externals
+     1>Source.obj : error LNK2005: "void __cdecl FindaDrink(class std::vector<class Drinks,class std::allocator<class Drinks> >)" (?FindaDrink@@YAXV?$vector@VDrinks@@V?$allocator@VDrinks@@@std@@@std@@@Z) already defined in MiscFunk.obj
+     1>Source.obj : error LNK2005: "bool __cdecl PickVFind(void)" (?PickVFind@@YA_NXZ) already defined in MiscFunk.obj
+     1>Source.obj : error LNK2005: "void __cdecl PickaDrink(class std::vector<class Drinks,class std::allocator<class Drinks> >)" (?PickaDrink@@YAXV?$vector@VDrinks@@V?$allocator@VDrinks@@@std@@@std@@@Z) already defined in MiscFunk.obj
+     1>Source.obj : error LNK2005: "void __cdecl Readinfiles(void)" (?Readinfiles@@YAXXZ) already defined in MiscFunk.obj
+     1>Source.obj : error LNK2005: "public: class std::vector<class Ingredients,class std::allocator<class Ingredients> > __thiscall Drinks::getIngredients(void)" (?getIngredients@Drinks@@QAE?AV?$vector@VIngredients@@V?$allocator@VIngredients@@@std@@@std@@XZ) already defined in Drinks.obj
+     1>Source.obj : error LNK2005: "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall Drinks::getName(void)" (?getName@Drinks@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) already defined in Drinks.obj
+     1>Source.obj : error LNK2005: "public: void __thiscall Drinks::setIngredients(class std::vector<class Ingredients,class std::allocator<class Ingredients> >)" (?setIngredients@Drinks@@QAEXV?$vector@VIngredients@@V?$allocator@VIngredients@@@std@@@std@@@Z) already defined in Drinks.obj
+     1>Source.obj : error LNK2005: "public: void __thiscall Drinks::setName(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?setName@Drinks@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in Drinks.obj
+     1>C:\Users\wmcclennan17\Documents\GitHub\Bartender\ConsoleApplication3\Debug\ConsoleApplication3.exe : fatal error LNK1169: one or more multiply defined symbols found
      1>Done Building Project "C:\Users\wmcclennan17\Documents\GitHub\Bartender\ConsoleApplication3\ConsoleApplication3\ConsoleApplication3.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:00.56
+Time Elapsed 00:00:01.45

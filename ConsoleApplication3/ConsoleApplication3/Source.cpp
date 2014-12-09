@@ -1,19 +1,12 @@
 
-
-
-
 #include"Drinks.cpp"
 #include"MiscFunk.cpp"
-
 
 #include<iostream>
 #include<string>
 #include<fstream>
 #include<vector>
 using namespace std;
-
-
-
 
 int main(){
 	ifstream ingfile;
@@ -72,7 +65,7 @@ int main(){
 	
 
 	if (PickVFind())
-		PickaDrink();
+		PickaDrink(drkData);
 	else{ FindaDrink(drkData); }
 
 }

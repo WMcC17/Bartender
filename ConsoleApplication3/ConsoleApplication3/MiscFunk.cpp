@@ -15,7 +15,6 @@ void Readinfiles(){
 
 	if (ingfile.fail()) {
 		cout << "Files not found.\n";
-		return 0;
 	}
 
 	ifstream drkfile;
@@ -23,7 +22,6 @@ void Readinfiles(){
 
 	if (drkfile.fail()){
 		cout << "Files not found.\n";
-		return 0;
 	}
 
 	string line;
@@ -42,12 +40,13 @@ void Readinfiles(){
 	double amt;
 	int numing;
 	int a = 0;
+	vector<Ingredients> ings;
 	// Reading in data from Drinks file
 	while (!drkfile.eof()){
 		getline(drkfile, name);
 		drkfile >> numing;
 		drk[a].setName(name);
-		vector<Ingredients> ings;
+	
 		for (int i = 0; i < numing; i++){
 
 			drkfile >> amt;
@@ -89,8 +88,19 @@ bool PickVFind()
 } 
 
 // Present a list of Drink types and allow user to iterate through the list until they have something they want.
-void PickaDrink(){
+void PickaDrink(vector<Drinks> drkData){
+	
+	int choice;
+	int i;
+	for (i = 0; i < drkData.size(); i++) //This number should come from where??!
+		cout << "(" << i << ")" << " " << drkData[choice].getName() << endl;
 
+	cout << "Please enter the number for the drink you would like to try.\n";
+	cin >> choice;
+	drkData.at(choice).mix();
+	
+		
+	//now that we have choice, choice needs to interract with the vector to select and output a drink. how?
 
 };
 
@@ -121,11 +131,11 @@ void FindaDrink(vector<Drinks> drkData){
 		bool matches = true;
 		for (int a = 0; a < drkData.size(); a++){
 			for (int i = 0; i < ings.size(); i++){
-				if (ings[i].getName() != drkData[a].getIngredients().at(i).getName)
+				if (ings[i].getName() != drkData[a].getIngredients().at(i).getName())
 					matches = false;
 			}
 			if (matches)
-				cout << drkData.at(a).getName << endl;
+				cout << drkData.at(a).getName() << endl;
 		}
 	
 };

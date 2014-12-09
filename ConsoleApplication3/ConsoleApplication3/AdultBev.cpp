@@ -1,7 +1,6 @@
 #ifndef _ADULTBEV_CPP_
 #define _ADULTBEV_CPP_
 
-
 #include "AdultBev.h"
 #include<iostream>
 #include<string>
@@ -16,10 +15,6 @@ bool AdultBev::Underage(){
 
 }
 
-
-
 void AdultBev::mix(){}
-
-AdultBev VirginAlt(){}
 
 #endif
